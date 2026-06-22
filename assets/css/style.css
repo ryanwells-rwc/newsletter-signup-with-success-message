@@ -1,0 +1,224 @@
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #36384d;
+}
+
+.text-preset-1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.text-preset-1-mobile {
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.text-preset-2-bold {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.text-preset-2-regular {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-preset-3 {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none !important;
+}
+
+main {
+  background-color: #fff;
+}
+main #initial-content .illustration {
+  width: 100%;
+  height: auto;
+}
+main #initial-content .text-container {
+  padding: 2.5rem 1.5rem 2.75rem;
+  color: #242742;
+}
+main #initial-content .text-container p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+main #initial-content .text-container .highlights-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main #initial-content .text-container .highlights-container .highlight-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+main #initial-content .text-container .highlights-container .highlight-entry p {
+  margin: 0;
+}
+main #initial-content .text-container form {
+  margin-top: 2.5rem;
+}
+main #initial-content .text-container form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+main #initial-content .text-container form label span {
+  display: none;
+}
+main #initial-content .text-container form label span.error {
+  color: #ff6155;
+  display: inline;
+}
+main #initial-content .text-container form input, main #initial-content .text-container form button {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+main #initial-content .text-container form input {
+  border: 1px solid #949494;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: #242742;
+}
+main #initial-content .text-container form input:focus {
+  outline: none;
+  border: 1px solid #242742;
+}
+main #initial-content .text-container form input.error {
+  border: 1px solid #ff6155;
+  color: #ff6155;
+  background-color: #ffe7e6;
+}
+main #initial-content .text-container form input.error:focus {
+  outline: none;
+}
+main #initial-content .text-container form input::placeholder {
+  color: #949494;
+  opacity: 1;
+}
+main #initial-content .text-container form button {
+  background-color: #242742;
+  color: #fff;
+  text-align: center;
+}
+main #success-content {
+  padding: 9.3125rem 1.5rem 4.375rem;
+  color: #fff;
+  text-align: left;
+}
+main #success-content h1 {
+  color: #242742;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+main #success-content p {
+  color: #242742;
+}
+main #success-content button {
+  background-color: #242742;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 16.4375rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-items: center;
+    padding: 4.5625rem 5rem;
+    height: 100vh;
+  }
+  main {
+    border-radius: 2.25rem;
+  }
+  main #initial-content {
+    margin: 2.625rem 2.5rem;
+  }
+  main #initial-content img.illustration {
+    border-radius: 1.5rem;
+  }
+  main #initial-content .text-container h1 {
+    font-size: 3.5rem;
+  }
+  main #success-content {
+    width: 31.5rem;
+    height: 32.5rem;
+    padding: 3.75rem 4rem;
+  }
+  main #success-content h1 {
+    font-size: 3.5rem;
+  }
+  main #success-content button {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1440px) {
+  main #initial-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4rem;
+  }
+  main #initial-content img.illustration {
+    width: 25rem;
+    height: 37.0625rem;
+    object-fit: cover;
+  }
+  main #initial-content .text-container {
+    width: 23.5rem;
+    margin-top: 4.5rem;
+    padding: 0;
+  }
+  main #success-content #dismiss-button:hover, main #success-content #dismiss-button:focus {
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff6a3a 0%, #ff527b 100%);
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

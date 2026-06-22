@@ -1,0 +1,307 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+$size-50: calc(4 / 16 * 1rem);
+$size-100: calc(8 / 16 * 1rem);
+$size-125: calc(10 / 16 * 1rem);
+$size-150: calc(12 / 16 * 1rem);
+$size-162: calc(13 / 16 * 1rem);
+$size-175: calc(14 / 16 * 1rem);
+$size-200: calc(16 / 16 * 1rem);
+$size-225: calc(18 / 16 * 1rem);
+$size-250: calc(20 / 16 * 1rem);
+$size-300: calc(24 / 16 * 1rem);
+$size-350: calc(28 / 16 * 1rem);
+$size-375: calc(30 / 16 * 1rem);
+$size-400: calc(32 / 16 * 1rem);
+$size-450: calc(36 / 16 * 1rem);
+$size-500: calc(40 / 16 * 1rem);
+$size-550: calc(44 / 16 * 1rem);
+$size-600: calc(48 / 16 * 1rem);
+$size-700: calc(56 / 16 * 1rem);
+$size-750: calc(60 / 16 * 1rem);
+$size-800: calc(64 / 16 * 1rem);
+$size-900: calc(72 / 16 * 1rem);
+$size-1000: calc(80 / 16 * 1rem);
+$size-1100: calc(88 / 16 * 1rem);
+$size-1200: calc(96 / 16 * 1rem);
+$size-1300: calc(104 / 16 * 1rem);
+$size-1400: calc(112 / 16 * 1rem);
+$size-1500: calc(120 / 16 * 1rem);
+$size-1600: calc(128 / 16 * 1rem);
+$size-1800: calc(144 / 16 * 1rem);
+$size-2000: calc(160 / 16 * 1rem);
+
+$white: #fff;
+$grey: #949494;
+$blue-700: #36384d;
+$blue-800: #242742;
+$red: #ff6155;
+$red-background: #ffe7e6;
+$gradient-4: linear-gradient(90deg, #ff6a3a 0%, #ff527b 100%);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $blue-700;
+}
+
+.text-preset-1 {
+  font-size: $size-700;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.text-preset-1-mobile {
+  font-size: $size-500;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.text-preset-2-bold {
+  font-size: $size-200;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.text-preset-2-regular {
+  font-size: $size-200;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-preset-3 {
+  font-size: $size-150;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none !important;
+}
+
+main {
+  background-color: $white;
+
+  #initial-content {
+
+    .illustration {
+      width: 100%;
+      height: auto;
+    }
+
+    .text-container {
+      padding: $size-500 $size-300 $size-550;
+      color: $blue-800;
+
+      p {
+        margin-top: $size-300;
+        margin-bottom: $size-300;
+      }
+
+      .highlights-container {
+        display: flex;
+        flex-direction: column;
+        gap: $size-100;
+
+        .highlight-entry {
+          display: flex;
+          align-items: flex-start;
+          gap: $size-200;
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      form {
+        margin-top: $size-500;
+
+        label {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          margin-bottom: $size-100;
+
+          span {
+            display: none;
+          }
+
+          span.error {
+            color: $red;
+            display: inline;
+          }
+        }
+
+        input, button {
+          width: 100%;
+          padding-top: $size-200;
+          padding-bottom: $size-200;
+          border-radius: $size-100;
+        }
+
+        input {
+          border: 1px solid $grey;
+          margin-bottom: $size-300;
+          padding-left: $size-300;
+          color: $blue-800;
+
+          &:focus {
+            outline: none;
+            border: 1px solid $blue-800;
+          }
+        }
+
+        input.error {
+          border: 1px solid $red;
+          color: $red;
+          background-color: $red-background;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        input::placeholder {
+          color: $grey;
+          opacity: 1;
+        }
+
+        button {
+          background-color: $blue-800;
+          color: $white;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  #success-content {
+    padding: calc(149 / 16 * 1rem) $size-300 calc(70 / 16 * 1rem);
+    color: $white;
+    text-align: left;
+
+    h1 {
+      color: $blue-800;
+      margin-top: $size-400;
+      margin-bottom: $size-400;
+    }
+
+    p {
+      color: $blue-800;
+    }
+
+    button {
+      background-color: $blue-800;
+      color: $white;
+      text-align: center;
+      width: 100%;
+      padding-top: $size-200;
+      padding-bottom: $size-200;
+      border-radius: $size-100;
+      margin-top: calc(263 / 16 * 1rem);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-items: center;
+    padding: calc(73 / 16 * 1rem) $size-1000;
+    height: 100vh;
+  }
+
+  main {
+    border-radius: $size-450;
+
+    #initial-content {
+      margin: calc(42 / 16 * 1rem) $size-500;
+
+      img.illustration {
+        border-radius: $size-300;
+      }
+
+      .text-container {
+        h1 {
+          font-size: $size-700;
+        }
+      }
+    }
+
+    #success-content {
+      width: calc(504 / 16 * 1rem);
+      height: calc(520 / 16 * 1rem);
+      padding: $size-750 $size-800;
+
+      h1 {
+        font-size: $size-700;
+      }
+
+      button {
+        margin-top: $size-400;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+
+    #initial-content {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: $size-800;
+
+      img.illustration {
+        width: calc(400 / 16 * 1rem);
+        height: calc(593 / 16 * 1rem);
+        object-fit: cover;
+      }
+
+      .text-container {
+        width: calc(376 / 16 * 1rem);
+        margin-top: $size-900;
+        padding: 0;
+      }
+    }
+
+    #success-content {
+      #dismiss-button {
+        &:hover, &:focus {
+          border: none;
+          outline: none;
+          background: $gradient-4;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
