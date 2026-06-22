@@ -13,12 +13,8 @@ form.addEventListener('submit', function (event) {
   emailError.textContent = '';
   emailError.classList.remove('error');
 
-  // Check validity using built-in checkValidity()
   if (!emailInput.checkValidity()) {
-    // Prevent actual form submission
-    //event.preventDefault();
 
-    // Apply custom error styles and messages
     emailInput.classList.add('error');
     emailError.classList.add('error');
 
